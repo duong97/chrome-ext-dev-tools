@@ -1,0 +1,87 @@
+#dtx-container {
+    display: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+#dtx-tool-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 505px;
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+    user-select: none;
+    z-index: 9991;
+    width: 200px;
+}
+#dtx-info {
+    display: none;
+    width: 500px;
+    height: 500px;
+    background: #f4f4f4;
+    color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 10px 20px;
+    word-wrap: break-word;
+    border-radius: 0 0 0 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+    resize: vertical;
+    overflow: auto;
+}
+#dtx-info label {
+    color: #647489;
+}
+#dtx-info #dtx-info-result,
+#dtx-info #dtx-info-selected-text {
+    resize: vertical;
+    overflow: auto;
+    width: 100%;
+    height: 42%;
+    border-radius: 4px;
+    border: 1px solid white;
+    background: white;
+    padding: 5px 15px;
+    color: #767a81;
+}
+.error {
+    background: #ffcdcd !important;
+}
+#dtx-overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #0000007d;
+    z-index: 9990;
+    top: 0;
+    left: 0;
+}
+.dtx-tool-item {
+    padding: 5px 15px;
+    margin: 10px 0;
+    /*box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;*/
+}
+.dtx-tool-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    transition: .5s;
+}
+.dtx-tool-item.active {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+.dtx-json-f-string { color: green; }
+.dtx-json-f-number { color: darkorange; }
+.dtx-json-f-boolean { color: blue; }
+.dtx-json-f-null { color: magenta; }
+.dtx-json-f-key { color: red; }
