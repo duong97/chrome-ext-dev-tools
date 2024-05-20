@@ -45,7 +45,7 @@ const listTools = {
         events:{
             onclick: function (e) {
                 let formattedJson = syntaxHighlight(JSON.stringify(JSON.parse(selectedText), null, 4));
-                return '<pre>'+formattedJson+'</pre>';
+                return '<pre style="white-space: pre-wrap;">'+formattedJson+'</pre>';
             }
         }
     },
@@ -224,7 +224,7 @@ function syntaxHighlight(json) {
             if (/:$/.test(match)) {
                 cls = 'dtx-json-f-key';
             } else {
-                cls = 'string';
+                cls = 'dtx-json-f-string';
             }
         } else if (/true|false/.test(match)) {
             cls = 'dtx-json-f-boolean';
