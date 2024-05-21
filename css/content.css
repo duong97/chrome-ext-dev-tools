@@ -51,13 +51,14 @@
     resize: vertical;
     overflow: auto;
     width: 100%;
-    height: 42%;
+    height: 40%;
     border-radius: 4px;
     border: 1px solid white;
     background: white;
     padding: 5px 15px;
     color: #767a81;
     box-sizing: border-box;
+    margin: 8px 0;
 }
 .error {
     background: #ffcdcd !important;
@@ -89,3 +90,22 @@
 .dtx-json-f-boolean { color: blue; }
 .dtx-json-f-null { color: magenta; }
 .dtx-json-f-key { color: red; }
+
+.dtx-info-text-tool-button {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#dtx-notify {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 30px;
+    background-color: #8cc7ee80;
+    color: #064159fa;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;
+}
