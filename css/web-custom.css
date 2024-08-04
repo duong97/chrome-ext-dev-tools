@@ -14,14 +14,16 @@
 }
 .conv-list-semi-compact #contact-search,
 .tab-main,
-#chatOnboard .chat-onboard
+#chatOnboard .chat-onboard,
+.msg-item.pinned .conv-item:hover
 {
     background: var(--background-lighter-color);
 }
 .msg-item .conv-item:hover {
     background: var(--background-hover-color);
 }
-.msg-item .conv-item.selected {
+.msg-item .conv-item.selected
+{
     background: var(--background-selected-color);
 }
 .msg-item.pinned .conv-item {
@@ -30,7 +32,9 @@
 .conv-item-body__main .conv-message {
     color: var(--text-color);
 }
-.conv-item .conv-item-title__name {
+.conv-item .conv-item-title__name,
+#chat-input-content-id #richInput
+{
     color: var(--text-title-color);
 }
 .message-view__scroll__inner,
