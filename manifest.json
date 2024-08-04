@@ -12,7 +12,10 @@
       "js": [
         "scripts/content.js"
       ],
-      "css": ["css/content.css"],
+      "css": [
+        "css/content.css",
+        "css/web-custom.css"
+      ],
       "matches": [
         "http://*/*",
         "https://*/*"

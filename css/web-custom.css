@@ -1,0 +1,43 @@
+/* BEGIN Zalo dark theme */
+:root {
+    --background-color: #24323f!important;
+    --background-lighter-color: #11364f!important;
+    --background-pinned-color: #033649!important;
+    --background-selected-color: #000!important;
+    --background-hover-color: #2a6480!important;
+    --text-color: #d8d8d8!important;
+    --text-title-color: #fff!important;
+}
+.msg-item .conv-item
+{
+    background: var(--background-color);
+}
+.conv-list-semi-compact #contact-search,
+.tab-main,
+#chatOnboard .chat-onboard
+{
+    background: var(--background-lighter-color);
+}
+.msg-item .conv-item:hover {
+    background: var(--background-hover-color);
+}
+.msg-item .conv-item.selected {
+    background: var(--background-selected-color);
+}
+.msg-item.pinned .conv-item {
+    background: var(--background-pinned-color);
+}
+.conv-item-body__main .conv-message {
+    color: var(--text-color);
+}
+.conv-item .conv-item-title__name {
+    color: var(--text-title-color);
+}
+.message-view__scroll__inner,
+#chat-input-container-id,
+#chatViewContainer #header,
+.chat-group-topic__preview .chat-group-topic__item,
+#chat-box-bar-id {
+    background: var(--background-lighter-color);
+}
+/* END Zalo dark theme */
