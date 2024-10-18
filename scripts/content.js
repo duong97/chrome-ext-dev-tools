@@ -24,7 +24,11 @@ const listTools = {
         events:{
             onclick: function (e) {
                 let unix_timestamp = +selectedText;
-                const date = new Date(unix_timestamp * 1000);
+                if (unix_timestamp.toString().length <= 10) {
+                    unix_timestamp *= 1000;
+                }
+
+                const date = new Date(unix_timestamp);
                 if (isNaN(date.getTime())) {
                     throw new Error("Invalid date");
                 } else {
@@ -311,7 +315,7 @@ function getDefaultToolId() {
 
     // Format timestamp
     const isNumber = (typeof selectedText === 'string' || typeof selectedText === 'number') && !isNaN(selectedText);
-    if (isNumber && selectedText.length === 10) {
+    if (isNumber && [10, 13].includes(selectedText.length)) {
         return listTools.toHumanDate.id;
     }
 
