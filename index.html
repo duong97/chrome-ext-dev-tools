@@ -1,6 +1,124 @@
 <html lang="">
+<style>
+    body {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        border-radius: 10px;
+    }
+    .container {
+        text-align: center;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 150px;
+        min-width: 200px;
+    }
+    h1 {
+        background: linear-gradient(to right, #60a5fa, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Gradient Border Button */
+    .gradient-border-button {
+        position: relative;
+        padding: 1rem 2.4rem;
+        color: white;
+        background: #1e293b;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .gradient-border-button::before {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        background: linear-gradient(45deg, #60a5fa, #a78bfa, #60a5fa);
+        border-radius: 10px;
+        z-index: -1;
+        transition: opacity 0.3s ease;
+        animation: borderRotate 4s linear infinite;
+    }
+
+    @keyframes borderRotate {
+        0% { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(360deg); }
+    }
+
+    .gradient-border-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
+    }
+    /* END Gradient Border Button */
+
+    /*Loading animation*/
+    .looping-rhombuses-spinner, .looping-rhombuses-spinner * {
+        box-sizing: border-box;
+    }
+
+    .looping-rhombuses-spinner {
+        width: calc(15px * 4);
+        height: 15px;
+        position: relative;
+    }
+
+    .looping-rhombuses-spinner .rhombus {
+        height: 15px;
+        width: 15px;
+        background-color: #ff1d5e;
+        left: calc(15px * 4);
+        position: absolute;
+        margin: 0 auto;
+        border-radius: 2px;
+        transform: translateY(0) rotate(45deg) scale(0);
+        animation: looping-rhombuses-spinner-animation 2500ms linear infinite;
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(1) {
+        animation-delay: calc(2500ms * 1 / -1.5);
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(2) {
+        animation-delay: calc(2500ms * 2 / -1.5);
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(3) {
+        animation-delay: calc(2500ms * 3 / -1.5);
+    }
+
+    @keyframes looping-rhombuses-spinner-animation {
+        0% {
+            transform: translateX(0) rotate(45deg) scale(0);
+        }
+        50% {
+            transform: translateX(-233%) rotate(45deg) scale(1);
+        }
+        100% {
+            transform: translateX(-466%) rotate(45deg) scale(0);
+        }
+    }
+    /*END Loading animation*/
+</style>
 <body>
-    <pre>Welcome to dev tools for web developer! Select a text -> click tools and try.</pre>
-    <script src="popup.js"></script>
+<div class="container">
+    <h1>Private tools</h1>
+</div>
+<div class="button-wrapper">
+    <button id="sync-zalo-token" class="gradient-border-button">
+        <span title="Update zalo token staging -> local">Sync zalo token</span>
+    </button>
+</div>
+
+<div>
+    <div id="loading" class="looping-rhombuses-spinner" style="margin: 0 auto; display: none;">
+        <div class="rhombus"></div>
+        <div class="rhombus"></div>
+        <div class="rhombus"></div>
+    </div>
+</div>
 </body>
 </html>
+<script src="popup.js"></script>

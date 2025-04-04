@@ -75,6 +75,15 @@ const listTools = {
             }
         }
     },
+    removeBackSlash: {
+        id: "dtx-remove-back-slash",
+        label: "Remove \\",
+        events:{
+            onclick: function (e) {
+                return selectedText.replaceAll("\\",'');
+            }
+        }
+    },
 }
 var selectedText = '';
 
