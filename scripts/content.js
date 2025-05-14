@@ -84,6 +84,15 @@ const listTools = {
             }
         }
     },
+    stringLength: {
+        id: "dtx-str-length",
+        label: "String length",
+        events:{
+            onclick: function (e) {
+                return selectedText.toString().length;
+            }
+        }
+    },
 }
 var selectedText = '';
 
