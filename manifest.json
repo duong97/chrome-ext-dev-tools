@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "js": [
-        "scripts/content.js"
+        "scripts/content.js",
+        "scripts/customPage.js"
       ],
       "css": [
         "css/content.css",
