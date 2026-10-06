@@ -11,7 +11,8 @@
     {
       "js": [
         "scripts/content.js",
-        "scripts/customPage.js"
+        "scripts/customPage.js",
+        "scripts/yiiDebug.js"
       ],
       "css": [
         "css/content.css",
